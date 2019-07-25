@@ -18,7 +18,7 @@ import os
 def connect_to_database():
 	global c
 	global con
-	DATABASE_URL = os.getenv('DATABASE_URL' , 'postgresql://postgres:1234@localhost/askprocoders')
+	DATABASE_URL = os.getenv('DATABASE_URL' , 'localhost here')
 	con = psycopg2.connect(DATABASE_URL , sslmode='require')
 	c = con.cursor()
 	print('connected to database')
@@ -45,10 +45,10 @@ def disconnect():
 
 
 print("this bot is working")
-CONSUMER_KEY = '7di1l1zH2exr1LwrlC9fbt9Fp'
-CONSUMER_SECRET = 'sqwgFgssleBF7LyikH9eAjKsEsj2F2Ggqvdk3LLLqXZxFGkLsU'
-ACCESS_KEY = '1132924430143905792-QQhRZjWMzEpUSbSTGXG65hBwalwz3H'
-ACCESS_SECRET = 'uOg33UdvMLHwwnDgA5b1WLtoyhK7DK55ppvT5wN0Av58L'
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
+ACCESS_KEY = ''
+ACCESS_SECRET = ''
 auth = tweepy.OAuthHandler(CONSUMER_KEY , CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY , ACCESS_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True)
